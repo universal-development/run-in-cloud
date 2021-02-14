@@ -1,0 +1,27 @@
+# podman docker kubernetes
+runtime: "docker"
+
+# docker specific parameters
+docker:
+
+podman:
+
+# kubernetes specific parameters
+kubernetes:
+  namespace: "rik"
+
+executor:
+  image: "denis256/ubuntu-20.04-ssh:0.0.1"
+
+  # seconds
+  timeout: 3600
+
+  command: "process-files.sh"
+
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "1"
+    limits:
+      memory: "128Mi"
+      cpu: "1"
